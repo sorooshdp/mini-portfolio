@@ -44,7 +44,7 @@ a {
 
 #nev-paragraph {
   font-family: "Dancing Script", cursive;
-  margin: auto 0.8rem;
+  margin: auto 1.4rem;
   font-size: 1.9rem;
   font-weight: 600;
 }
@@ -57,7 +57,7 @@ ul {
 }
 
 ul > li {
-  margin: 0 0.9rem;
+  margin: 0 2.3rem;
 }
 
 h1 > span {
@@ -96,7 +96,6 @@ h1 > span {
   height: 100vh;
   width: 100%;
   background-color: var(--main-background-color);
-
 }
 
 #welcome-section p {
@@ -118,13 +117,13 @@ h1 > span {
   justify-content: center;
 }
 
-#about > p{
-  font-size:1.15rem;
+#about > p {
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
 
-#about > h2{
+#about > h2 {
   font-size: 1.7rem;
   font-weight: bold;
   font-style: italic;
@@ -157,21 +156,67 @@ h1 > span {
   padding: 1rem;
 }
 
-@media (max-width: 768px) {  
-  .btn{
+#projects {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+#projects h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 1.6rem;
+}
+
+#projects > p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  padding: 1rem 0.5rem;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project-link {
+  background: var(--primery-color);
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+  border-radius: 2px;
+}
+
+img {
+  display: block;
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .btn {
     width: 25%;
   }
-  #about > p{
-    width:65%;
-    font-size:1.11rem;
+  #about > p {
+    width: 65%;
+    font-size: 1.11rem;
     font-weight: 500;
     margin-bottom: 0.8rem;
   }
-    
+
   .about-container {
     flex-direction: column;
   }
-  
+
   .about-container div {
     margin: 1.5rem;
     width: 100%;
@@ -201,8 +246,6 @@ hr:before {
   border-radius: 20px;
 }
 
-
-
 @keyframes nav-header {
   0% {
     opacity: 0;
@@ -230,4 +273,3 @@ hr:before {
     opacity: 1;
   }
 }
-
