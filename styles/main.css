@@ -68,9 +68,12 @@ h1 > span {
   font-family: "Dancing Script", cursive;
 }
 
+.nav-link {
+    transition: all 0.2s ease-in-out;
+  }
+
 .nav-link:hover {
   transform: rotate(7deg);
-  transition: 0.5s;
 }
 /*------------welcome section-----------*/
 #welcome-section {
@@ -103,13 +106,13 @@ h1 > span {
   border: none;
   background: var(--primery-color);
   border-radius: 6px;
+  transition: all ease 0.5s;
 }
 
 .btn:hover {
   border: 2px solid var(--main-black);
   border-radius: 0;
   transform: scale(1.1);
-  transition: ease 0.5s;
 }
 /*--------------projects section---------------*/
 #about {
@@ -149,13 +152,13 @@ h1 > span {
   background: rgba(99, 101, 92, 0.4);
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: all 0.5s ease-in-out;
 }
 
 .about-item:hover{
   background-color: var(--primery-color);
   box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
   transform: scale(1.05);
-  transition: 0.5s ease-in-out;
 }
 
 .icon {
@@ -207,6 +210,7 @@ h1 > span {
   background: var(--primery-color);
   box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
   border-radius: 2px;
+  transition: all 0.5s ease;
 }
 
 .project-link:hover {
@@ -219,7 +223,6 @@ h1 > span {
 6px 6px #373737;
 -webkit-transform: translateX(-3px);
 transform: translateX(-3px);
-transition: 0.5s ease;
 }
 
 img {
