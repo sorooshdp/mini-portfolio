@@ -300,6 +300,57 @@ input:focus,textarea:focus{
   background-position: left;
 }
 
+/*-------footer section------------*/
+
+.footer{
+  background-color: #373737;
+  height: 30vh;
+}
+
+.footer div {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.footer p {
+  padding: 1.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.footer ul {
+  margin-left: 3.5rem ;
+}
+
+.footer-icon {
+  color: #fff;
+  width: 1.5rem;
+  font-size: 45px;
+}
+
+.telegram:hover{
+  color: #0088CC;
+  transform: 0.4s;
+}
+
+.twitter:hover{
+	color:#1DA1F2;
+  transform: 0.4s;
+}
+
+.instagram:hover{
+  color: #5851db;
+  transform: 0.4s;
+}
+
+.github:hover{
+  color: #6cc644;
+  transform: 0.4s;
+}
+
 @media (max-width: 768px) {
   .btn {
     width: 25%;
