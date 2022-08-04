@@ -1,8 +1,10 @@
+/*-----variables--------*/
 :root {
   --main-text-color: #0d0d0d;
   --secondary-text-color: #fef9f8;
   --main-background-color: #fef9f8;
   --primery-color: #ef9273;
+  --main-black:#000;
 }
 
 html,
@@ -19,7 +21,7 @@ body {
 *::before {
   box-sizing: inherit;
 }
-
+/*-------------navbar section------------*/
 a {
   display: inline-block;
   text-decoration: none;
@@ -31,7 +33,7 @@ a {
 .navbar {
   position: fixed;
   width: 100%;
-  border-bottom: 3px solid #000;
+  border-bottom: 3px solid var(--main-black);
   display: flex;
   justify-content: space-between;
   background-color: var(--primery-color);
@@ -69,25 +71,7 @@ h1 > span {
   transform: rotate(7deg);
   transition: 0.5s;
 }
-
-.btn {
-  width: 15%;
-  height: 3rem;
-  /* margin-left: 1.9rem; */
-  font-family: inherit;
-  font-size: 1.2rem;
-  border: none;
-  background: var(--primery-color);
-  border-radius: 6px;
-}
-
-.btn:hover {
-  border: 2px solid #000;
-  border-radius: 0;
-  transform: scale(1.1);
-  transition: ease 0.5s;
-}
-
+/*------------welcome section-----------*/
 #welcome-section {
   display: inline-flex;
   justify-content: center;
@@ -109,6 +93,24 @@ h1 > span {
   font-size: 2rem;
 }
 
+.btn {
+  width: 15%;
+  height: 3rem;
+  /* margin-left: 1.9rem; */
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  background: var(--primery-color);
+  border-radius: 6px;
+}
+
+.btn:hover {
+  border: 2px solid var(--main-black);
+  border-radius: 0;
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+/*--------------projects section---------------*/
 #about {
   width: 100%;
   display: flex;
@@ -131,17 +133,28 @@ h1 > span {
 }
 
 .about-container {
-  width: 65%;
-  display: inherit;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1.5rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
 }
 
-.about-container div {
+.about-item {
   margin: 1.5rem;
   width: 13rem;
   background: rgba(99, 101, 92, 0.4);
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.about-item:hover{
+  background-color: var(--primery-color);
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
 }
 
 .icon {
@@ -195,11 +208,96 @@ h1 > span {
   border-radius: 2px;
 }
 
+.project-link:hover {
+  box-shadow:
+1px 1px #373737,
+2px 2px #373737,
+3px 3px #373737,
+4px 4px #373737,
+5px 5px #373737,
+6px 6px #373737;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+transition: 0.5s ease;
+}
+
 img {
   display: block;
   height: calc(100% - 6.8rem);
   width: 100%;
   object-fit: cover;
+}
+
+/*----------contact section--------------*/
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.form-container{
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"],input[type="email"]{
+  width: 45%;
+  height: 2.5rem;
+  margin: 2rem 1.5rem;
+}
+
+#subject{
+  width:94.5%;
+}
+
+textarea{
+  width: 94.5%;
+  margin:2rem;
+  resize: none;
+}
+
+input,textarea{
+  border: 3px solid var(--primery-color);
+  font-family: inherit;
+  font-size: large;
+  font-weight: bold;
+  padding: 01.4rem;
+}
+
+input:focus,textarea:focus{
+  outline: none;
+}
+
+#btn{
+  width: 130px;
+  height: 45px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family:inherit;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to left, #ef9273 50%, #000 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
+}
+
+#btn:hover{
+  color: #fff;
+  background-position: left;
 }
 
 @media (max-width: 768px) {
@@ -224,13 +322,18 @@ img {
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
+
+  input[type="text"],input[type="email"]{
+    width: 100%;
+  }
+
 }
 
 hr {
   overflow: visible;
   height: 30px;
   border-style: solid;
-  border-color: black;
+  border-color: var(--main-black);
   border-width: 1px 0 0 0;
   border-radius: 20px;
 }
@@ -241,10 +344,12 @@ hr:before {
   height: 30px;
   margin-top: -31px;
   border-style: solid;
-  border-color: black;
+  border-color: var(--main-black);
   border-width: 0 0 1px 0;
   border-radius: 20px;
 }
+
+/*-------------navbar animations------------*/
 
 @keyframes nav-header {
   0% {
